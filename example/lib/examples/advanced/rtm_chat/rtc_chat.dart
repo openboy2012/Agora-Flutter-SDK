@@ -254,15 +254,15 @@ class _RtmChatConsumerWidgetState extends ConsumerState<RtmChatConsumerWidget> {
       await sc.release();
     }
     await _rtmClient.release();
-    await _engine.release();
+    // await _engine.release();
   }
 
   Future<void> _init() async {
-    _engine = createAgoraRtcEngine();
-    await _engine.initialize(RtcEngineContext(
-      appId: config.appId,
-    ));
-    await _engine.setParameters('{"rtc.vos_list":["114.236.138.120:4052"]}');
+    // _engine = createAgoraRtcEngine();
+    // await _engine.initialize(RtcEngineContext(
+    //   appId: config.appId,
+    // ));
+    // await _engine.setParameters('{"rtc.vos_list":["114.236.138.120:4052"]}');
 
     _rtmClient = createAgoraRtmClient();
   }
@@ -362,6 +362,7 @@ class _RtmChatConsumerWidgetState extends ConsumerState<RtmChatConsumerWidget> {
               '[onConnectionStateChange] channelName: $channelName, state: $state, reason: $reason');
         },
       ),
+      areaCode: RtmAreaCode.RtmAreaCodeCN,
     );
 
     _logCall('RtmClient.initialize', () async {

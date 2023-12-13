@@ -1,0 +1,3 @@
+class RtmJoinTopicOption {}
+
+class RtmTopicResult {}

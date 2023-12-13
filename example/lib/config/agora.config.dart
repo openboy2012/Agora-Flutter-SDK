@@ -2,7 +2,7 @@
 String get appId {
   // Allow pass an `appId` as an environment variable with name `TEST_APP_ID` by using --dart-define
   return const String.fromEnvironment('TEST_APP_ID',
-      defaultValue: '<TEST_APP_ID>');
+      defaultValue: 'cd1f455efba8496caef1db648f0849b1');
 }
 
 /// Please refer to https://docs.agora.io/en/Agora%20Platform/token
@@ -38,6 +38,5 @@ String get rtmAppId {
 
 String get rtmToken {
   // Allow pass an `appId` as an environment variable with name `TEST_APP_ID` by using --dart-define
-  return const String.fromEnvironment('RTM_TOKEN',
-      defaultValue: '<RTM_TOKEN>');
+  return const String.fromEnvironment('RTM_TOKEN', defaultValue: '<RTM_TOKEN>');
 }

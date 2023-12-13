@@ -3,6 +3,9 @@ import 'package:agora_rtc_engine/src/binding/agora_rtm_client_impl.dart'
     as rtmc_binding;
 import 'package:agora_rtc_engine/src/binding_forward_export.dart';
 import 'package:agora_rtc_engine/src/impl/global_method_channel.dart';
+import 'package:agora_rtc_engine/src/rtm_new/agora_rtm_lock.dart';
+import 'package:agora_rtc_engine/src/rtm_new/agora_rtm_login.dart';
+import 'package:agora_rtc_engine/src/rtm_new/agora_rtm_storage.dart';
 import 'package:iris_method_channel/iris_method_channel.dart';
 import 'package:agora_rtc_engine/src/impl/agora_stream_channel_impl_override.dart';
 
@@ -174,5 +177,43 @@ class RtmClientImpl extends rtmc_binding.RtmClientImpl {
 
     await irisMethodChannel.dispose();
     _instance = null;
+  }
+
+  @override
+  Future<RtmLock> getLock() {
+    // TODO: implement getLock
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<RtmStorage> getStorage() {
+    // TODO: implement getStorage
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<LoginResult> login(String token) {
+    // TODO: implement login
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> logout() {
+    // TODO: implement logout
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<StreamChannel> subscribeChannel(
+      String channelName, SubscribeOptions options) {
+    // TODO: implement subscribeChannel
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> unsubscribeChannel(
+      String channelName, SubscribeOptions options) {
+    // TODO: implement unsubscribeChannel
+    throw UnimplementedError();
   }
 }

@@ -28,7 +28,7 @@ void streamChannelSmokeTestCases() {
 
       try {
         const String optionsToken = "hello";
-        const JoinChannelOptions options = JoinChannelOptions(
+        const RtmJoinChannelOptions options = RtmJoinChannelOptions(
           token: optionsToken,
         );
         await streamChannel.join(
@@ -143,7 +143,7 @@ void streamChannelSmokeTestCases() {
         const RtmMessageQos optionsQos = RtmMessageQos.rtmMessageQosUnordered;
         Uint8List optionsMeta = Uint8List.fromList([1, 2, 3, 4, 5]);
         const int optionsMetaLength = 10;
-        final JoinTopicOptions options = JoinTopicOptions(
+        final RtmJoinTopicOptions options = RtmJoinTopicOptions(
           qos: optionsQos,
           meta: optionsMeta,
           metaLength: optionsMetaLength,
@@ -414,4 +414,3 @@ void streamChannelSmokeTestCases() {
 //  skip: !(),
   );
 }
-

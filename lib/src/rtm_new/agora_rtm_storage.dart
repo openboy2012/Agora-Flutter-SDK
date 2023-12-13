@@ -1,0 +1,3 @@
+class RtmStorage {}
+
+class RtmStorageResult {}
